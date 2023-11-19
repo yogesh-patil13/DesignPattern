@@ -1,0 +1,57 @@
+
+public class User {
+    int userId;
+    String userName;
+    String email;
+    
+    
+	private User(int userId, String userName, String email) {
+		super();
+		this.userId = userId;
+		this.userName = userName;
+		this.email = email;
+	}
+	
+	
+	public int getUserId() {
+		return userId;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public String getEmail() {
+		return email;
+	}
+   
+	
+	class UserBuilder
+	{
+			int userId;
+		    String userName;
+		    String email;
+		    
+		    public UserBuilder()
+		    {
+		    	
+		    }
+		    
+		    public UserBuilder setId(int id)
+		    {
+		    	this.userId=id;
+		    	return this;
+		    }
+		    
+		    public UserBuilder setUserName(String name)
+		    {
+		    	this.userName=name;
+		    	return this;
+		    }
+		    
+		    public UserBuilder setEmail(String email)
+		    {
+		    	this.email=email;
+		    	return this;
+		    }
+	}
+    
+}
